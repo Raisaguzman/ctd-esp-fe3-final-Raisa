@@ -37,8 +37,12 @@ h1{
 
 nav{
   display: flex;
+  margin: 0 auto;
   justify-content: space-between;
-  padding: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 90%;
+  align-items: baseline;
 }
 
 
@@ -55,6 +59,8 @@ a:hover{
 
 footer {
   display: flex;
+  margin: 0 auto;
+  align-items: center;
   justify-content: center;
   text-align: center;
   padding: 2rem;
@@ -63,15 +69,27 @@ footer {
   width: 90%;
   height: 40px;
   margin-top: 2rem;
+  flex-direction: column;
 }
 
-footer > img{
+.logo-DH {
   width: 200px;
   margin: 0;
 }
+
+.redes-sociales{
+  width: 18px;
+  margin: 5px;
+}
+
 footer > p{
+  display: block;
+  width: 100%;
   margin: 0;
   padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  background-color: red;
+  align-items: center;
 }
 
 form{
