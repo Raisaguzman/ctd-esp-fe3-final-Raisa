@@ -15,10 +15,12 @@ const Card = ({ char }) => {
     <div className="card">
       <Link to={`/detail/${char.id}`}>
         <h3>{char.name}</h3>
-        <img src="./images/doctor.jpg" alt="" className="card-image"/>
+        <img src="./images/doctor.jpg" alt="" className="card-image" />
       </Link>
       <br />
-      <button onClick={toggleFav} className="favButton">Add fav</button>
+      <button onClick={toggleFav} className="favButton">
+        {findFav ? "Delete fav" : "Add fav"}
+      </button>
     </div>
   );
 };
