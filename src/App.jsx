@@ -4,8 +4,16 @@ import Favs from "./Routes/Favs";
 import Detail from "./Routes/Detail";
 import Contact from "./Routes/Contact"
 import Layout from "./Layout/Layout";
+import { useCharStates } from "./Context/Context";
+import { useEffect } from "react";
 
 function App() {
+  const { state } = useCharStates();  
+
+  useEffect(() => {
+    document.body.className = state.theme;
+  }, [state.theme]);
+
   return (
     <BrowserRouter>
       <Routes>

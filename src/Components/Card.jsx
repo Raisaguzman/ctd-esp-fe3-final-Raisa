@@ -12,7 +12,7 @@ const Card = ({ char }) => {
   };
 
   return (
-    <div className="card">
+    <div className={`card ${state.theme}`}>
       <Link to={`/detail/${char.id}`}>
         <h3>{char.name}</h3>
         <img src="./images/doctor.jpg" alt="" className="card-image" />

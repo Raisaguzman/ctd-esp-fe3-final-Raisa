@@ -10,6 +10,8 @@ export const reducer = (state, action) => {
         );
         return { ...state, favs: filterFavs };
       case "TOGGLE_THEME":
-        return { ...state, theme: "acá puede un ternario" };
+        return { ...state, theme: state.theme === "light" ? "dark" : "light" };
+      default: 
+      return state;
     }
   };

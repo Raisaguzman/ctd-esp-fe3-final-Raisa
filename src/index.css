@@ -7,7 +7,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -68,11 +78,21 @@ form{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 300px;
-  height: 100px;
+  width: 300px; 
   margin: 0 auto;
 }
 
+form button {
+  margin-top: 30px;
+}
+
+form label {
+  display: block;
+}
+
+form input {
+  width: 100%;
+}
 .card{
   display: flex;
   justify-content: space-around;
@@ -125,6 +145,28 @@ tr:nth-child(even) {
   background-color: #12121296;
   color: white;
 }
-.dark > a {
+.dark a {
   color: white;
+}
+
+.dark button {
+  color: white;
+  background-color: rgb(119, 118, 118);
+}
+
+.contact h2{
+  text-align: center;
+}
+
+.contact p{
+  text-align: center;
+}
+
+.detail {
+  text-align: center;
+}
+
+.detail a{
+  color: #262c81;
+  text-decoration: underline;
 }

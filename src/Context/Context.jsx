@@ -5,24 +5,26 @@ import { reducer } from "../reducers/reducer";
 const CharStates = createContext();
 
 const lsFavs = JSON.parse(localStorage.getItem("favs")) || [];
+const savedTheme = localStorage.getItem("theme") || "light";
 
 const initialState = {
   chars: [],
   favs: lsFavs,
-  theme: "",
+  theme: savedTheme,
 };
 
 const Context = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  // const [favs, setFavs] = useState(lsFavs);
-  // const [chars, setChars] = useState([]);
-  // const [theme, setTheme] = useState(true);
   const url = "https://jsonplaceholder.typicode.com/users";
 
   useEffect(() => {
     localStorage.setItem("favs", JSON.stringify(state.favs));
   }, [state.favs]);
+
+  useEffect(() => {
+    localStorage.setItem("theme", state.theme);
+  }, [state.theme]);
 
   useEffect(() => {
     axios(url).then((res) => {
